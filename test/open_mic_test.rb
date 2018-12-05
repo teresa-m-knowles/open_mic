@@ -3,6 +3,7 @@ require 'minitest/pride'
 require './lib/user'
 require './lib/joke'
 require './lib/open_mic'
+require 'pry'
 
 class OpenMicTest < MiniTest::Test
   def test_it_exists
@@ -47,6 +48,7 @@ class OpenMicTest < MiniTest::Test
     refute open_mic.repeated_jokes?
 
     ali.tell(sal, joke_1)
+
     assert open_mic.repeated_jokes?
 
   end
