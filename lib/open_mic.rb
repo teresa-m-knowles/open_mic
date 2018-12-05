@@ -17,11 +17,9 @@ class OpenMic
   end
 
   def repeated_jokes?
-
     @all_jokes = @performers.map do |performer|
       performer.jokes
     end
-
     @all_jokes.flatten!
 
     if @all_jokes.uniq == @all_jokes
@@ -30,7 +28,7 @@ class OpenMic
       @all_jokes.uniq != @all_jokes
       true
     end
-
   end
+
 
 end
