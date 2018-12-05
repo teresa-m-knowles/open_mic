@@ -3,20 +3,20 @@ require 'minitest/pride'
 require './lib/user'
 require 'pry'
 
-class UserTest < MiniTest :: Test
+class UserTest < MiniTest::Test
   def test_it_exists
     sal = User.new("Sal")
     assert_instance_of User, sal
   end
 
   def test_it_can_read_the_name
-    skip
+
     sal = User.new("Sal")
     assert_equal "Sal", sal.name
   end
 
   def test_user_starts_with_zero_jokes
-    skip
+    
     sal = User.new("Sal")
     assert sal.jokes.empty?
   end
