@@ -17,11 +17,13 @@ class OpenMic
   end
 
   def repeated_jokes?
-    @all_jokes = []
-    @performers.each do |performer|
-      @all_jokes << performer.jokes
+
+    @all_jokes = @performers.map do |performer|
+      performer.jokes
     end
+
     @all_jokes.flatten!
+
     if @all_jokes.uniq == @all_jokes
       false
     elsif
